@@ -49,7 +49,7 @@ def adder(input1, input2):
     return summ[::-1]
 
 def subtractor(a,b):
-    sum = adder(a,twosComp(b))
+    sub = adder(a,twosComp(b))
     return sub[1:]
 
 print(adder('010','111'))
