@@ -1,5 +1,3 @@
-# Binary adder and subtractor
-
 def reverse(input1):
     return input1[::-1]
 
@@ -41,6 +39,7 @@ def twosComp(a):
     return b[1:]
 
 def adder(input1, input2):
+    (input1,input2)=makeEqual(input1, input2)
     input1 = input1[::-1]
     input2 = input2[::-1]
     summ = ''
@@ -55,6 +54,13 @@ def subtractor(a,b):
     sub = adder(a,twosComp(b))
     return sub[1:]
 
-print(adder('010','111'))
-print(subtractor('0101','1010'))
+def makeEqual(a,b):
+    if(len(a)>len(b)):
+        for i in range(0,len(a)-len(b)):
+            b = '0'+ b
+    elif(len(a)<len(b)):
+        for i in range(0,len(b)-len(a)):
+            a = '0' + a
+    return (a,b)
 
+#print(adder(adder(adder('1011000','101100'),''),'1011'))
