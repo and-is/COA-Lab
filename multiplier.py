@@ -1,4 +1,5 @@
 import utils
+import adder_subtractor
 
 def multiply(multiplicand, multiplier):
     array = []
@@ -13,9 +14,8 @@ def multiply(multiplicand, multiplier):
     print(array)
     product=''
     for i in range(0,len(array)):
-        product = utils.adder(array[i],product)
+        product = adder_subtractor.adder(array[i],product)
         print(product)
     return product
 
-print('Product is ' + multiply('101','011'))
 
