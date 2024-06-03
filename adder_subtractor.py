@@ -31,10 +31,7 @@ def onesComp(a):
     return b
 
 def twosComp(a):
-    b = adder(onesComp(a),'0001')
-    return b[1:]
+    return adder(onesComp(a),'0001')
 
 def subtractor(a,b):
-    (a,b)=makeEqual(a, b)
-    sub = adder(a,utils.twosComp(b))
-    return sub[1:]
+    return adder(a,twosComp(b))

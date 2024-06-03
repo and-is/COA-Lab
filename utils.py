@@ -25,5 +25,3 @@ def findSum(a,b,c):
 
 def findCarry(a,b,c):
     return orGate(orGate(andGate(a,b),andGate(b,c)),andGate(a,c))
-
-
